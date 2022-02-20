@@ -26,6 +26,15 @@
 }
 
 .main-form .field label {
+    width: 50%;
+}
+
+.main-form .field select {
+    width: 50%;
+    height: 40px;
+}
+
+.main-form .field label {
     font-size: 18px;
 }
 

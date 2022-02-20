@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - M2G2 Patrimonial</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/form.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="../images/logo-exemplo.PNG" alt="Logo M2G2 Patrimonial">
+        </div>
+        <div class="main-form">
+            <form action="/login" method="POST">
+                <div class="field">
+                    <label for="categoriaImovel">Categoria de imóvel</label>
+                    <select onchange="setForm()"  name="categoriaImovel" id="categoriaImovel">
+                        <optgroup>
+                            <option value="null">
+                                ------
+                            </option>
+                            <option value="residencial">
+                                Residencial
+                            </option>
+                            <option value="comercial">
+                                Comercial
+                            </option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="tipoImovel">Tipo de imóvel</label>
+                    <select name="tipoImovel" id="tipoImovel">
+                        <optgroup>
+                            <option value="null">
+                                ------
+                            </option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" name="cidade">
+                </div>
+                <div class="field">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" name="bairro">
+                </div>
+                <div class="field">
+                    <label for="rua">Rua</label>
+                    <input type="text" name="rua">
+                </div>
+                <div class="field">
+                    <label for="preco">Faixa de preço</label>
+                    <input placeholder="Min" type="number" name="min-price" min="0">
+                    <input placeholder="Max" type="number" name="max-price" min="0">
+                </div>
+                <div class="field">
+                    <label for="metragem">Metragem</label>
+                    <input type="number" name="metragem" min="0">
+                </div>
+                <div class="field">
+                    <label for="numeroQuartos">Nº de quartos</label>
+                    <input type="number" name="numeroQuartos" min="0">
+                </div>
+                <div class="field">
+                    <label for="numeroBanheiros">Nº de banheiros</label>
+                    <input type="number" name="numeroBanheiros" min="0">
+                </div>
+                <div class="field">
+                    <label for="vagas">Vagas</label>
+                    <input type="number" name="vagas" min="0">
+                </div>
+                <div id="submit-field" class="field">
+                    <button type="submit">Buscar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="../scripts/form.js"></script>
+</body>
+</html>

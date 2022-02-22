@@ -21,7 +21,7 @@
     border: 1px solid gray;
 }
 
-.main-form .field input:focus {
+.main-form .field input:focus, .main-form .field select:focus{
     outline-color: rgb(97, 109, 178);
 }
 
@@ -32,6 +32,7 @@
 .main-form .field select {
     width: 50%;
     height: 40px;
+    padding: 10px;
 }
 
 .main-form .field label {

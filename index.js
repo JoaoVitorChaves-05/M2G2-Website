@@ -20,6 +20,24 @@ app.get('/admin', (req, res) => {
     res.sendFile(__dirname + '/public/views/admin.html')
 })
 
+app.get('/search', (req, res) => {
+    const {modalidadeImovel, 
+        categoriaImovel, 
+        tipoImovel,
+        cidade,
+        bairro,
+        rua,
+        min_price,
+        max_price,
+        metragem,
+        numeroQuartos,
+        numeroBanheiros,
+        vagas
+    } = req.query
+
+    res.send('<h1>OK</h1>')
+})
+
 app.post('/login', (req, res) => {
     const {login, password} = req.body
 

@@ -14,7 +14,23 @@
             <img src="../images/logo-exemplo.PNG" alt="Logo M2G2 Patrimonial">
         </div>
         <div class="main-form">
-            <form action="/login" method="POST">
+            <form action="/search" method="get">
+                <div class="field">
+                    <label for="modalidadeImovel">Modalidade de imóvel</label>
+                    <select name="modalidadeImovel" id="modalidadeImovel">
+                        <optgroup>
+                            <option value="null">
+                                ------
+                            </option>
+                            <option value="Venda">
+                                Venda
+                            </option>
+                            <option value="Aluguel">
+                                Aluguel
+                            </option>
+                        </optgroup>
+                    </select>
+                </div>
                 <div class="field">
                     <label for="categoriaImovel">Categoria de imóvel</label>
                     <select onchange="setForm()"  name="categoriaImovel" id="categoriaImovel">
@@ -55,8 +71,8 @@
                 </div>
                 <div class="field">
                     <label for="preco">Faixa de preço</label>
-                    <input placeholder="Min" type="number" name="min-price" min="0">
-                    <input placeholder="Max" type="number" name="max-price" min="0">
+                    <input placeholder="Min" type="number" name="min_price" min="0">
+                    <input placeholder="Max" type="number" name="max_price" min="0">
                 </div>
                 <div class="field">
                     <label for="metragem">Metragem</label>
